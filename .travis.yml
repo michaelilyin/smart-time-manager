@@ -1,0 +1,6 @@
+language: android
+android:
+  components:
+    - android-21
+    - build-tools-24.0.3
+    - platform-tools-24.0.4
