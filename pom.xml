@@ -58,6 +58,26 @@
             <artifactId>anko-appcompat-v7</artifactId>
             <version>0.9</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.anko</groupId>
+            <artifactId>anko-sqlite</artifactId>
+            <version>0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.salomonbrys.kodein</groupId>
+            <artifactId>kodein-android</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-android</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.microutils</groupId>
+            <artifactId>kotlin-logging</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -82,7 +102,6 @@
     </pluginRepositories>
 
     <build>
-        <sourceDirectory>/src/main/kotlin</sourceDirectory>
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
@@ -107,6 +126,13 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>/src/main/kotlin</sourceDir>
+                                <sourceDir>${project.build.directory}/generated-sources/r</sourceDir>
+                                <sourceDir>${project.build.directory}/generated-sources/aidl</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
 
                     <execution>
@@ -115,6 +141,13 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>/src/test</sourceDir>
+                                <sourceDir>${project.build.directory}/generated-sources/r</sourceDir>
+                                <sourceDir>${project.build.directory}/generated-sources/aidl</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

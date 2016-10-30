@@ -17,4 +17,7 @@
 		<!-- All customizations that are NOT specific to a particular API-level can go here. -->
 	</style>
 
+	<style name="AppTheme.RoundActivityButton">
+		<item name="android:background">@drawable/round_activity_button</item>
+	</style>
 </resources>

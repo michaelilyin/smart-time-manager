@@ -5,17 +5,18 @@
 	android:versionName="1.0-SNAPSHOT">
 
 	<uses-sdk
-		android:minSdkVersion="8"
+		android:minSdkVersion="16"
 		android:targetSdkVersion="23" />
 
 	<application
 		android:allowBackup="true"
 		android:icon="@drawable/ic_launcher"
 		android:label="@string/app_name"
-		android:theme="@style/AppTheme">
+		android:theme="@style/AppTheme"
+		android:name=".core.TimeManagerApplication">
 
 		<activity
-			android:name="ru.michaelilyin.smart.time.manager.MainActivity"
+			android:name=".MainActivity"
 			android:label="@string/app_name">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
